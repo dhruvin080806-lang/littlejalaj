@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Baby Brother Page 3 🌟</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;flex-direction:column;height:100vh;background:linear-gradient(-45deg,#fbc2eb,#a6c1ee,#ff9a9e,#fad0c4);background-size:400% 400%;animation:gradientBG 10s ease infinite;font-family:"Pacifico",cursive;text-align:center;color:#fff;overflow:hidden;}
+  @keyframes gradientBG{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  img{max-width:250px;border-radius:20px;box-shadow:0 0 30px rgba(255,255,255,0.8);transition:transform 0.4s,box-shadow 0.4s;}
+  img:hover{transform:scale(1.05);box-shadow:0 0 50px #fff,0 0 80px #a6c1ee;}
+  h1{margin:20px 0;font-size:2em;text-shadow:0 0 10px #a6c1ee;min-height:3em;}
+  .btns{margin-top:20px;z-index:5;}
+  a{text-decoration:none;padding:12px 25px;border-radius:30px;background:#a6c1ee;color:white;margin:0 10px;font-size:1.2em;box-shadow:0 0 10px #a6c1ee;transition:transform 0.2s;}
+  a:hover{transform:scale(1.1);}
+  .heart{position:absolute;bottom:-20px;font-size:20px;animation:floatUp 6s linear forwards;opacity:0.9;}
+  @keyframes floatUp{0%{transform:translateY(0) scale(0.8);opacity:1;}100%{transform:translateY(-100vh) scale(1.5);opacity:0;}}
+</style>
+</head>
+<body>
+  <img src="jalu3.jpg" alt="Baby Brother Sweet Photo">
+  <h1 id="message">✨ નાના હાથ, પણ ખુશી બહુ મોટી લાવે છે ✨</h1>
+  <div class="btns">
+    <a href="page4.html">Next ➡️</a>
+  </div>
+  <audio autoplay loop>
+    <source src="baby-music.mp3" type="audio/mpeg">
+  </audio>
+<script>
+  setInterval(()=>{
+    const heart=document.createElement("div");
+    heart.className="heart";
+    heart.textContent="🌟";
+    heart.style.left=Math.random()*window.innerWidth+"px";
+    heart.style.fontSize=(16+Math.random()*20)+"px";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+  },800);
+    let i=0; setInterval(()=>{document.getElementById("message").textContent=messages[i]; i=(i+1)%messages.length;},4000);
+</script>
+</body>
+</html>
+
